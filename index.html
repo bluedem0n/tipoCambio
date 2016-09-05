@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ejercicio1</title>
+		<!-- Bootstrap CSS -->
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+	<body>
+		<h1 class="text-center">Calcular Monto en Dolares</h1>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="monto" class="control-label col-xs-3">Monto:</label>
+                <div class="col-xs-4">
+                    <div class="input-group">
+                        <span class="input-group-addon">S/</span>
+                        <input type="text" name="monto" id="monto" class="form-control" onkeypress="return soloNumeros(event);" placeholder="Monto">
+                        <span class="input-group-addon">.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="monto" class="control-label col-xs-3">Tipo de Cambio:</label>
+                <div class="col-xs-4">
+                    <div class="input-group">
+                        <input type="text" name="tipocambio" id="tipocambio" class="form-control" onkeypress="return soloNumeros(event);" placeholder="Tipo de Cambio">
+                        <span class="input-group-addon">.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-offset-3 col-xs-4">
+                    <button type="button" id="calcular" class="btn btn-primary">Calcular</button>
+                </div>
+            </div>
+        </form>
+        <div class="col-xs-offset-3 col-xs-4">
+        <div class="panel panel-default">
+            <div class="panel-body" id="resultado">Resultado</div>
+        </div>
+        </div>
+        <div id="resultado"></div>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</body>
+</html>
